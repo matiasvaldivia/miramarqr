@@ -19,25 +19,18 @@
 
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;' onload='miFuncion();'>
-
-
-
 	<!-- enable artoolkit on this scene -->
 	<a-scene  embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
-       
-
-
-
-
-       <a-assets>
-    <video id="anibal" autoplay loop="true" src="https://drive.google.com/open?id=1PThX2CmMLzC-AHVzAPQadJycHttLlzu2"></video>
+         <a-assets>
+    <video id="antarctica" autoplay loop="true" src="antarctica.mp4"> </video>
   </a-assets>
 
   <!-- Using the asset management system. -->
-  <a-video src="#anibal" width="16" height="9" position="0 0 -20"></a-video>
+  <a-videosphere src="#antarctica"></a-videosphere>
 
   <!-- Defining the URL inline. Not recommended but more comfortable for web developers. -->
-  <a-video src="https://drive.google.com/open?id=1PThX2CmMLzC-AHVzAPQadJycHttLlzu2"></a-video>
+  <a-videosphere src="africa.mp4"></a-videosphere>
+    
 
 		<a-marker-camera preset='hiro'></a-marker-camera>
 	</a-scene>
