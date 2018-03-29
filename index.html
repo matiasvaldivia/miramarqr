@@ -6,7 +6,7 @@
 <title>MIRAMAR QR</title>
 	<script>
 		function miFuncion() {
-			alert('Busque el marcador junrto al QR');
+			alert('Apunte al marcador cuadrado MQR junto al codigo');
 			document.getElementById('arjsDebugUIContainer').style.display = 'none';
 		}
 	</script>
@@ -17,7 +17,7 @@
 </head>
 
 
-<body  onload='miFuncion()' style='margin : 0px; overflow: hidden; font-family: Monospace;'>
+<body  onload='miFuncion();' style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 	<!-- enable artoolkit on this scene -->
 	<a-scene  embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
          <a-assets>
