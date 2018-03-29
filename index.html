@@ -1,35 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" >
+<!-- include aframe -->
+<script src="vendor/aframe/build/aframe.js"></script>
+<!-- include aframe-ar.js -->
+<script src="build/aframe-ar.js"></script>
 
-<head>
-  <meta charset="UTF-8">
-  <title>MIRAMAR QR</title>
-  
-</head>
+<body style='margin : 0px; overflow: hidden; font-family: Monospace;'><div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+	<a href="https://github.com/jeromeetienne/AR.js/" target="_blank">AR.js</a> - mobile performance in a-frame
+	<br/>
+	Contact me any time at <a href='https://twitter.com/jerome_etienne' target='_blank'>@jerome_etienne</a>
+</div>
+	<!-- enable artoolkit on this scene -->
+	<a-scene stats embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
 
-<body>
+		<!-- define the object which gonna be put on this marker  -->
+		<a-box position='0 0.5 0' material='opacity: 0.5; side: double'>
+			<a-torus-knot radius='0.26' radius-tubular='0.05'>
+				<a-animation attribute="rotation" to="360 0 0" dur="3000" easing='linear' repeat="indefinite"></a-animation>
+			</a-torus-knot>
+		</a-box>
 
-  <!-- Augmented Reality on the Web in 10 lines of html! https://github.com/jeromeetienne/ar.js --> 
-<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-<script src="aframe-ar.js"></script>
-<script>THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'</script>
-<body style='margin : 0px; overflow: hidden;'>
-	<a-scene embedded artoolkit='sourceType: webcam;'>
-	<a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="0.5" position="0 0.5 0" segments-height="53">
-         <a-animation attribute="scale"
-              dur="1000"
-              from= "1 1 1"
-              to="2 2 2"
-              direction='alternate-reverse'
-              easing= "ease-in-out-circ"     
-              repeat="indefinite"></a-animation>
-     </a-sphere>
 		<a-marker-camera preset='hiro'></a-marker-camera>
 	</a-scene>
 </body>
-  
-  
-
-</body>
-
 </html>
