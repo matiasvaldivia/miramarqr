@@ -3,10 +3,10 @@
 <script src="build/aframe.js"></script>
 <!-- include aframe-ar.js -->
 <script src="build/aframe-ar.js"></script>
-<style type='css'> 
-#arjsDebugUIContainer{ display: none; }
-</style>
 
+<script >
+document.getElementById('arjsDebugUIContainer').style.display = 'none';
+</script>
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 	<!-- enable artoolkit on this scene -->
 	<a-scene  embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
