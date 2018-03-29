@@ -1,25 +1,21 @@
-<! DOCTYPE html>
-<! - incluye un encuadre ->
-< script  src = "build / aframe.js " > </ script >
-<! - incluye aframe-ar.js ->
-< script  src = "build / aframe-ar.js " > </ script >
+<!DOCTYPE html>
+<!-- include aframe -->
+<script src="vendor/aframe/build/aframe.js"></script>
+<!-- include aframe-ar.js -->
+<script src="build/aframe-ar.js"></script>
 
-< body  style = ' margen: 0px; desbordamiento: oculto; font-family: Monospace; ' > < div  style = ' posición: fija; arriba: 10px; ancho: 100%; text-align: center; índice z: 1; ' >
-	< Un  href = " https://github.com/jeromeetienne/AR.js/ "  target = " _blank " > AR.js </ una > - rendimiento móvil en un fotograma
-	< Br />
-	
-</ div >
-	<! - habilita artoolkit en esta escena ->
-	< a-scene  stats  embedded  arjs = ' sourceType: webcam; modo de detección: mono; maxDetectionRate: 30; canvasWidth: 240; LienzoAltura: 180 ' >
+<body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
+	<!-- enable artoolkit on this scene -->
+	<a-scene stats embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
 
-		<! - define el objeto que se va a poner en este marcador   ->
-		< a-box  position = ' 0 0.5 0 '  material = ' opacidad: 0.5; lado: doble ' >
-			< a-toro nudo  radio = ' 0.26 '  radio-tubular = ' 0.05 ' >
-				< a-animation  attribute = " rotation "  to = " 360 0 0 "  dur = " 3000 "  easing = ' linear '  repeat = " indefinido " > </ a-animation >
-			</ a-torus-knot >
-		</ a-box >
+		<!-- define the object which gonna be put on this marker  -->
+		<a-box position='0 0.5 0' material='opacity: 0.5; side: double'>
+			<a-torus-knot radius='0.26' radius-tubular='0.05'>
+				<a-animation attribute="rotation" to="360 0 0" dur="3000" easing='linear' repeat="indefinite"></a-animation>
+			</a-torus-knot>
+		</a-box>
 
-		< a-marker-camera  preset = ' hiro ' > </ a-marker-camera >
-	</ a-scene >
-</ body >
-</ html >
+		<a-marker-camera preset='hiro'></a-marker-camera>
+	</a-scene>
+</body>
+</html>
